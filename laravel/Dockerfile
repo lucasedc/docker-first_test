@@ -12,6 +12,7 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
 
 WORKDIR /var/www
 RUN rm -rf /var/www/html
+COPY . /var/www
 COPY ./.docker/ ./.docker/
 
 
