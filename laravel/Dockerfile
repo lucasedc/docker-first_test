@@ -12,7 +12,7 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
 
 WORKDIR /var/www
 RUN rm -rf /var/www/html
-COPY ./docker/app/.env ./docker/app/.env
+COPY ./.docker/app/.env ./.docker/app/.env
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
