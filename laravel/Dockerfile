@@ -17,7 +17,7 @@ RUN rm -rf /var/www/html
 RUN ln -s public html
 COPY . /var/www
 COPY ./.docker/ ./.docker/
-
+COPY ./.docker/entrypoint.sh ./
 
 RUN  set ex \
   # Install Composer( Requires git )
